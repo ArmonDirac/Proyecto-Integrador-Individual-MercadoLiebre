@@ -1,5 +1,4 @@
 * {
-  /* background-color: #eac926; */
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
@@ -7,10 +6,16 @@
   font-family: "Roboto", sans-serif;
 }
 
+a {
+  color: #000;
+}
+
 header {
   background-color: #eac926;
   padding: 1.2rem;
   align-items: center;
+  /* position: fixed; */
+  width: 100%;
 }
 
 header p {
@@ -25,7 +30,6 @@ header p {
   border: none;
   border-radius: 3px;
   width: 30%;
-  display: flex;
   align-items: center;
   padding: 0.7rem;
 }
@@ -33,7 +37,6 @@ header p {
 .buscador button {
   border: none;
   background-color: #fff;
-  display: flex-end;
 }
 
 .buscador input {
@@ -89,24 +92,21 @@ main {
 
 .container {
   display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  flex-wrap: nowrap;
+  justify-content: space-around;
+  flex-wrap: wrap;
   align-content: flex-start;
 }
 
 article {
-  width: 20%;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
   margin: 10px;
   padding: 15px;
   border: 1px solid #ebebeb;
   background-color: #fff;
-  box-shadow: 0.5rem 0.5rem #ddd;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
   border-radius: 3px;
-}
-
-article img {
-  align-items: center;
 }
 
 article p i {
@@ -137,8 +137,14 @@ article p {
   font-size: 16px;
 }
 
-footer {
+.footer-item {
+  display: block;
   background-color: #fff;
+  margin: auto;
+}
+
+footer {
+  display: flex;
 }
 
 footer i {
