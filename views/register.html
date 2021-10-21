@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
@@ -37,13 +37,17 @@
     </header>
     <main>
         <section>
-            <form action="/">
+            <form id="register-form" action="/">
+                <label for="nombre_y_apellido">Nombre y apellido: *</label>
                 <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido" required>
-                <input type="text" name="usuario" placeholder="Nombre de usuario" required>
-                <input type="email" name="mail" required placeholder="E-mail">
-                <h3>Fecha de nacimiento</h3>
+                <label for="fecha_nacimiento">Fecha de nacimiento: *</label>
                 <input type="date" name="fecha_nacimiento" required>
+                <label for="mail">Email: *</label>
+                <input type="email" name="mail" required placeholder="E-mail">
+                <label for="domicilio">Domicilio: *</label>
                 <input type="text" name="domicilio" placeholder="Domicilio" required>
+                <label for="usuario">Nombre de usuario: *</label>
+                <input type="text" name="usuario" placeholder="Nombre de usuario" required>
                 <h3>Perfil del usuario</h3>
                 <input type="radio" name="perfil_usuario" value=1>
                 <input type="radio" name="perfil_usuario" value=1>
