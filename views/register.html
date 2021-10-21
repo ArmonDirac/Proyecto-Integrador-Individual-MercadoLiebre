@@ -4,30 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registro</title>
     <link rel="stylesheet" href="/static/css/register.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
-    <form action="/">
-        <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido" required>
-        <input type="text" name="usuario" placeholder="Nombre de usuario" required>
-        <input type="email" name="mail" required placeholder="E-mail">
-        <h3>Fecha de nacimiento</h3>
-        <input type="date" name="fecha_nacimiento" required>
-        <input type="text" name="domicilio" placeholder="Domicilio" required>
-        <h3>Perfil del usuario</h3>
-        <input type="radio" name="perfil_usuario" value=1>
-        <input type="radio" name="perfil_usuario" value=1>
-        <h3>Intereses</h3>
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-        <input type="checkbox" name="" id="">
-        <input type="password" name="password" placeholder="Contraseña" required minlength="8">
-        <input type="password" name="confirmar_password" placeholder="Confirmar contraseña" required minlength="8">
-        <button type="submit">Enviar</button>
-        <button type="reset">Borrar</button>
-    </form>
+    <header>
+        <div class="nav-busqueda">
+          <a href="/"><img height="65px" src="/static/images/logo-mercado-liebre.svg" alt="logo"/></a>
+          <div class="buscador"> 
+            <input type="text" name="" id="barraDeBusqueda" placeholder="Buscar productos, marcas y más"><button><i class="fas fa-search fa-lg"></i></button>
+            
+          </div> 
+          <p><i class="fas fa-hand-holding-usd fa-lg"></i> Compra en cuotas y sin tarjeta de credito</p>
+        </div>
+        <div class="nav-menu">
+          <ul class="nav-opciones">
+            <li><a href="#">Ofertas</a></li>
+            <li><a href="#">Tiendas Oficiales</a></li>
+            <li><a href="#">Vender</a></li>
+            <li><a href="#">Ayuda</a></li>
+          </ul>
+          <ul class="nav-cuenta">
+            <a href="register">Creá tu cuenta <i class="fas fa-id-card fa-sm"></i></a>
+            <a href="login">Ingresá <i class="fas fa-sign-in-alt fa-sm"></i></a>
+            <a href="#">Mis Compras <i class="fas fa-shopping-basket fa-sm"></i> </a>
+          </ul>
+        </div>
+    </header>
+    <main>
+        <section>
+            <form action="/">
+                <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido" required>
+                <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+                <input type="email" name="mail" required placeholder="E-mail">
+                <h3>Fecha de nacimiento</h3>
+                <input type="date" name="fecha_nacimiento" required>
+                <input type="text" name="domicilio" placeholder="Domicilio" required>
+                <h3>Perfil del usuario</h3>
+                <input type="radio" name="perfil_usuario" value=1>
+                <input type="radio" name="perfil_usuario" value=1>
+                <h3>Intereses</h3>
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="checkbox" name="" id="">
+                <input type="password" name="password" placeholder="Contraseña" required minlength="8">
+                <input type="password" name="confirmar_password" placeholder="Confirmar contraseña" required minlength="8">
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-item">
+            <i class="fas fa-credit-card"></i>
+            <h3>Paga con tarjeta en efectivo</h3>
+            <p>Con Mercado Liebre Cash, tenés cuotas sin ineteres con tarjeta o efectivo en puntos de pago.¡Y siempre es seguro!</p>
+        </div>
+        <div class="footer-item">
+            <i class="fas fa-gift"></i>
+            <h3>Envios gratis desde $2500</h3>
+            <p>Solo por estar registrad@ en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos</p>
+        </div>
+        <div class="footer-item">  
+            <i class="fas fa-user-shield"></i>
+            <h3>Seguridad, de principio a fin</h3>
+            <p>¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nnada que no puedas hacer, porque estas siempre protegid@</p>
+        </div>
+        <h3>Copyright 1999-2020 MercadoLiebre S.R.L.</h3>
+      </footer>
 </body>
 </html>

@@ -14,13 +14,12 @@ header {
   display: flex;
   flex-direction: column;
   flex: wrap;
-  justify-content: space-between;
   background-color: #eac926;
   padding: 1.2rem;
   align-items: center;
-  /* position: fixed; */
+  position: fixed;
+  top: 0;
   width: 100%;
-  min-height: 40vh;
 }
 
 header p {
@@ -34,7 +33,7 @@ header p {
   background-color: white;
   border: none;
   border-radius: 3px;
-  width: 100wh;
+  width: 100%;
   align-items: center;
   padding: 0.7rem;
 }
@@ -42,6 +41,7 @@ header p {
 .buscador button {
   border: none;
   background-color: #fff;
+  cursor: pointer;
 }
 
 .buscador input {
@@ -52,15 +52,16 @@ header p {
 }
 
 .nav-busqueda {
-  display: block;
-  justify-content: space-between;
+  display: inline-block;
   align-items: center;
+}
+
+.nav-busqueda > * {
+  margin-bottom: 1rem;
 }
 
 .nav-menu {
   display: none;
-
-  width: 100%;
 }
 
 .nav-opciones {
@@ -79,14 +80,20 @@ header p {
   list-style: none;
 }
 
-.nav-menu a {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.3rem;
+.burger-menu {
+  padding: 0.2rem;
+  border: 1px solid;
+  border-radius: 3px;
 }
 
 main {
   background-color: #eee;
+  text-align: center;
+  width: 100vw;
+}
+
+section {
+  padding-top: 220px;
 }
 
 .titulares {
@@ -130,9 +137,15 @@ article p {
 .titulares {
   font-size: 24px;
 }
+
 .precios {
   font-size: 18px;
 }
+
+.descripciones {
+  display: none;
+}
+
 .descuentos {
   font-size: 16px;
   color: #39b54a;
@@ -144,15 +157,13 @@ article p {
 .footer-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   margin-bottom: 20px;
 }
 
 footer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
   background-color: #fff;
 }
@@ -164,6 +175,7 @@ footer i {
 }
 
 @media (min-width: 361px) {
+  /* IPAD */
   .container {
     display: flex;
     justify-content: space-around;
@@ -184,22 +196,40 @@ footer i {
     border-radius: 3px;
   }
 
-  .descripciones {
-    display: none;
-  }
-
   .nav-menu {
     display: none;
-    justify-content: space-between;
   }
 }
 
 @media (min-width: 769px) {
+  /* DESKTOP */
+  header {
+    background-color: #eac926;
+    padding: 1.2rem;
+    align-items: center;
+    /* position: fixed; */
+    width: 100%;
+    min-height: 20vh;
+  }
+
+  header p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    display: flex;
+  }
+
   .burger-menu {
     display: none;
   }
 
   .nav-busqueda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -223,19 +253,8 @@ footer i {
     width: 90%;
   }
 
-  header {
-    background-color: #eac926;
-    padding: 1.2rem;
-    align-items: center;
-    /* position: fixed; */
-    width: 100%;
-    min-height: 20vh;
-  }
-
-  header p {
-    font-size: 1.3rem;
-    font-weight: bold;
-    display: flex;
+  section {
+    padding-top: 149px;
   }
 
   .descripciones {
@@ -244,6 +263,12 @@ footer i {
 
   .nav-menu {
     display: flex;
+  }
+
+  .nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.3rem;
   }
 
   .container {
@@ -266,60 +291,3 @@ footer i {
     border-radius: 3px;
   }
 }
-
-/* {
-  background-color: #eac926;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-}
-
-main {
-  text-align: center;
-  width: 100vw;
-}
-
-main section i {
-  display: block;
-  font-size: ​16​px​;
-  padding: ​5​px​;
-  width: ​30​px​;
-  height: ​30​px​;
-  border: ​1​px​ ​solid​ ​#39b54a;
-  background-color: #fff;
-  border-radius: ​50;
-  position: absolute​;
-  right: ​20​px​;
-  top: ​-15​px​;
-}
-
-
-.container {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  flex-wrap: nowrap;
-  align-content: flex-start;
-}
-article {
-  width: 600px;
-  margin: 10px;
-  padding: 15px;
-  border: 1px solid #ebebeb;
-  background-color: #ebebeb;
-}
-
-article p {
-  background-color: #ebebeb;
-}
-div {
-  text-align: center;
-  width: 90vw;
-}
-section {
-  text-align: center;
-  width: 90vw;
-}
- */
