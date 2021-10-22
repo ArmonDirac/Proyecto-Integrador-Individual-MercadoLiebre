@@ -15,10 +15,9 @@
     <header>
         <div class="nav-busqueda">
           <a href="/"><img height="65px" src="/static/images/logo-mercado-liebre.svg" alt="logo"/></a>
-          <div class="buscador"> 
-            <input type="text" name="" id="barraDeBusqueda" placeholder="Buscar productos, marcas y más"><button><i class="fas fa-search fa-lg"></i></button>
-            
-          </div> 
+          <form action="" class="buscador"> 
+            <input type="search" name="" id="barraDeBusqueda" placeholder="Buscar productos, marcas y más"><button><i class="fas fa-search fa-lg"></i></button>
+          </form> 
           <p><i class="fas fa-hand-holding-usd fa-lg"></i> Compra en cuotas y sin tarjeta de credito</p>
         </div>
         <div class="nav-menu">
@@ -34,34 +33,44 @@
             <a href="#">Mis Compras <i class="fas fa-shopping-basket fa-sm"></i> </a>
           </ul>
         </div>
+        <div class="burger-menu"> <i class="fas fa-bars fa-2x"></i></div>
     </header>
     <main>
         <section>
-            <form id="register-form" action="/">
-                <label for="nombre_y_apellido">Nombre y apellido: *</label>
-                <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido" required>
-                <label for="fecha_nacimiento">Fecha de nacimiento: *</label>
-                <input type="date" name="fecha_nacimiento" required>
-                <label for="mail">Email: *</label>
-                <input type="email" name="mail" required placeholder="E-mail">
-                <label for="domicilio">Domicilio: *</label>
-                <input type="text" name="domicilio" placeholder="Domicilio" required>
-                <label for="usuario">Nombre de usuario: *</label>
-                <input type="text" name="usuario" placeholder="Nombre de usuario" required>
-                <h3>Perfil del usuario</h3>
-                <input type="radio" name="perfil_usuario" value=1>
-                <input type="radio" name="perfil_usuario" value=1>
-                <h3>Intereses</h3>
-                <input type="checkbox" name="" id="">
-                <input type="checkbox" name="" id="">
-                <input type="checkbox" name="" id="">
-                <input type="checkbox" name="" id="">
-                <input type="checkbox" name="" id="">
-                <input type="password" name="password" placeholder="Contraseña" required minlength="8">
-                <input type="password" name="confirmar_password" placeholder="Confirmar contraseña" required minlength="8">
-                <button type="submit">Enviar</button>
-                <button type="reset">Borrar</button>
-            </form>
+            <div class="wrapper">
+                <form id="register-form" action="/">
+                    <label for="nombre_y_apellido">Nombre y apellido: *</label>
+                    <input type="text" name="nombre_y_apellido" placeholder="Nombre y apellido" required>
+                    <label for="fecha_nacimiento">Fecha de nacimiento: *</label>
+                    <input type="date" name="fecha_nacimiento" required>
+                    <label for="mail">Email: *</label>
+                    <input type="email" name="mail" required placeholder="E-mail">
+                    <label for="domicilio">Domicilio: *</label>
+                    <input type="text" name="domicilio" placeholder="Domicilio" required>
+                    <label for="usuario">Nombre de usuario: *</label>
+                    <input type="text" name="usuario" placeholder="Nombre de usuario" required>
+                    <label>Perfil del usuario: *</label>
+                    <div id="selector-perfil">
+                        <p class="etiquetas-checkBox">Comprador</p><input type="radio" name="perfil_usuario" value="Comprador" checked>
+                        <p class="etiquetas-checkBox">Vendedor</p><input type="radio" name="perfil_usuario" value="Vendedor">
+                    </div>
+                    <label for="ineteres">Intereses: *</label>
+                    <div id="selector-intereses">
+                        <p class="etiquetas-checkBox"><input type="checkbox" name="intereses" value="electro">Electro</p>
+                        <p class="etiquetas-checkBox">Moda</p><input type="checkbox" name="intereses" value="moda">
+                        <p class="etiquetas-checkBox">Hogar</p><input type="checkbox" name="intereses" value="hogar">
+                        <p class="etiquetas-checkBox">Muebles</p><input type="checkbox" name="intereses" value="muebles">
+                        <p class="etiquetas-checkBox">Autos</p><input type="checkbox" name="intereses" value="autos">
+                    </div>
+                     <label for="password">Nueva contraseña: *</label>
+                    <input type="password" name="password" placeholder="Contraseña" required minlength="8">
+                    <input type="password" name="confirmar_password" placeholder="Confirmar contraseña" required minlength="8">
+                    <div class="form-control">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
     <footer>

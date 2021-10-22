@@ -14,9 +14,9 @@ header {
   display: flex;
   flex-direction: column;
   flex: wrap;
+  align-items: center;
   background-color: #eac926;
   padding: 1.2rem;
-  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
@@ -33,7 +33,7 @@ header p {
   background-color: white;
   border: none;
   border-radius: 3px;
-  width: 100%;
+  width: 90%;
   align-items: center;
   padding: 0.7rem;
 }
@@ -52,8 +52,9 @@ header p {
 }
 
 .nav-busqueda {
-  display: inline-block;
-  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .nav-busqueda > * {
@@ -65,7 +66,6 @@ header p {
 }
 
 .nav-opciones {
-  margin: 2rem 0 0 2rem;
   width: 25%;
   display: flex;
   justify-content: space-between;
@@ -73,7 +73,6 @@ header p {
 }
 
 .nav-cuenta {
-  margin: 2rem 0 0 2rem;
   width: 30%;
   display: flex;
   justify-content: space-between;
@@ -93,25 +92,24 @@ main {
 }
 
 section {
-  padding-top: 220px;
+  padding-top: 219px;
 }
 
 .titulares {
   font-size: 24px;
   font-weight: 2000;
-  margin: 1rem 0 1rem 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 article {
   display: block;
-  width: 80wh;
   margin: 10px;
   padding: 15px;
   border: 1px solid #ebebeb;
@@ -162,6 +160,7 @@ article p {
 }
 
 footer {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,19 +175,30 @@ footer i {
 
 @media (min-width: 361px) {
   /* IPAD */
+  header {
+    background-color: #eac926;
+    padding: 1.2rem;
+    align-items: center;
+    width: 100%;
+    min-height: 21vh;
+  }
+
+  section {
+    width: 100wh;
+    padding-top: 215px;
+  }
+
   .container {
+    padding: 1rem;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-content: center;
-    width: 80%;
+    width: 100%;
   }
 
   article {
     display: inline-block;
-    /* flex-direction: column; */
-    width: 20wh;
-    margin: 10px;
+    width: 30wh;
     padding: 15px;
     border: 1px solid #ebebeb;
     background-color: #fff;
@@ -196,8 +206,43 @@ footer i {
     border-radius: 3px;
   }
 
-  .nav-menu {
+  .burger-menu {
     display: none;
+  }
+
+  .buscador {
+    width: 50%;
+  }
+
+  .nav-busqueda {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-opciones {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .nav-cuenta {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
   }
 }
 
@@ -207,7 +252,6 @@ footer i {
     background-color: #eac926;
     padding: 1.2rem;
     align-items: center;
-    /* position: fixed; */
     width: 100%;
     min-height: 20vh;
   }
@@ -227,6 +271,20 @@ footer i {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+  }
+
+  .nav-opciones {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .nav-cuenta {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
   }
 
   .nav-menu {
@@ -254,15 +312,11 @@ footer i {
   }
 
   section {
-    padding-top: 149px;
+    padding-top: 164px;
   }
 
   .descripciones {
     display: inline;
-  }
-
-  .nav-menu {
-    display: flex;
   }
 
   .nav-menu a {
@@ -275,19 +329,39 @@ footer i {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-content: flex-start;
     width: 100%;
   }
 
   article {
     display: flex;
     flex-direction: column;
-    width: 20wh;
-    margin: 10px;
+    width: 10wh;
     padding: 15px;
     border: 1px solid #ebebeb;
     background-color: #fff;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
     border-radius: 3px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+  }
+
+  .footer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 30%;
+  }
+
+  footer i {
+    font-size: 2em;
+    margin-bottom: 5px;
+    color: #0454aa;
   }
 }
